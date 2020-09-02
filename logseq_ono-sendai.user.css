@@ -1,0 +1,410 @@
+/* ==UserStyle==
+@name           logseq_ono-sendai
+@namespace      https://github.com/cannibalox/logseq_ono-sendai
+@version        0.1.0
+@description    dark mode for logseq
+@author         _ph / www.hpx1.com
+@updateURL      https://raw.githubusercontent.com/cannibalox/logseq_ono-sendai/master/logseq_ono-sendai.user.css
+==/UserStyle== */
+
+@-moz-document domain("logseq.com") {
+
+/* uncomment to use terminal pixel font	and add VT3232 to the font-family line 50
+@font-face {
+  font-family: 'VT323';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: local('VT323 Regular'), local('VT323-Regular'), url(https://fonts.gstatic.com/s/vt323/v12/pxiKyp0ihIEF2isfFJU.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+*/
+@font-face {
+  font-family: 'Oxygen Mono';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: local('Oxygen Mono'), local('OxygenMono-Regular'), url(https://fonts.gstatic.com/s/oxygenmono/v8/h0GsssGg9FxgDgCjLeAd7hjWx-6_Pg.woff2) format('woff2');
+  unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}	
+:root {
+	--bgcolor: #17191a;
+	--bgcolor-alt: rgba(22, 31, 35, .72);
+	--bgcolor-alt2: #1a1f20;
+	--bgcolor-alt3: #000;
+	--bghover: #286c91;
+	--bgselected: #054669;
+	--text-color: #e6e6e6;
+	--text-muted: #898b85;
+	--text-hover:#77d47c;
+	--text-accent:#29b7f0;
+	--text-accent2:#235284;
+	--text-contrast:#df267c;
+    --text-accent3: #6bdf64;
+	--text-links: #23dd64;
+	--border: #374d57;
+	--highlight:#9ad94e;
+    --tagpills:#325dba;
+}
+html {
+    font-family: Oxygen mono, Consolas, monospace,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol!important;
+}		
+.dark-theme {
+    color: var(--text-color);
+}	
+.dark-theme .bg-base-3 {
+    background-color: var(--bgcolor);
+}
+/*====top bar===*/
+#head {
+	background-color: var(--bgcolor-alt3);	
+}
+.sm\:h-12 {
+    height: 2rem;
+}
+.md\:block {
+    display: block;
+	top: 2px !important;
+	font-size: 13px;
+	font-weight: 400;
+}
+.dark-theme button.pull:hover {
+    background-color: var(--bgcolor-alt3) !important;
+}
+.p-1 > svg > g {
+	stroke:red !important;
+    stroke-width: 100 !important;
+}	
+/*====NW search====*/
+.dark-theme #search-wrapper {
+    color: var(--text-muted);
+}
+.dark-theme #search_field {
+    color: #dfdfdf;
+    background: 0 0;
+    background-color: var(--bgcolor-alt3) !important;
+    background-position-x: 0px;
+    background-position-y: 0px;
+    background-repeat: repeat;
+    background-attachment: scroll;
+    background-image: none;
+    background-size: auto;
+    background-origin: padding-box;
+    background-clip: border-box;
+	margin-left: 0px;
+	height:30px;
+	margin-top:0px;
+	padding-left: 3em !important;
+	width:300px;
+}
+.h-full {
+    height: 80%;
+}
+#search-wrapper.inset-y-0 {
+    top: -4px;
+    bottom: 0;
+}	
+.left-0 {
+    left: 9px;
+}
+#ac-inner {
+    background-color: var(--bgcolor-alt3);
+}
+/*===    ====*/
+.dark-theme a, .dark-theme button.menu {
+    color: #acb5b7;
+}
+.dark-theme a:hover {
+    color: var(--text-hover);
+}
+.dark-theme a.menu-link:hover, .dark-theme button.menu:focus, .dark-theme button.pull:hover {
+    background-color: var(--bghover);
+}
+.dark-theme a.chosen {
+    background-color: var(--bgselected);
+}
+/*=== h1 h2 ====*/
+.dark-theme .page-references h2, .dark-theme h1.title {
+    color: var(--text-accent);
+}
+/* === 3dots ====*/ 	
+div.ml-1.relative a svg{
+    color: var(--text-contrast) !important;
+}
+/* === page ref [[]]===*/
+span.page-reference a.page-ref {
+    color: var(--text-accent);    
+    }
+/* === page ref title ===*/
+div.hd-control a.page-ref {
+    color: var(--text-accent3);    
+    }
+/* === links ====*/ 	
+.dark-theme .content a {
+    color: var(--text-accent);
+}
+/* === recent-pages ====*/ 	
+.recent-pages a.mb-1 {
+    color: var(--text-links);
+}	
+/* === arrow block unfold ====*/ 	
+a.block-control {
+    color: var(--text-contrast) !important;
+}
+/*=== hr ====*/
+.dark-theme hr {
+    border-color: var(--border);
+}
+/*=== highlights ====*/
+mark {
+    background: var(--highlight);
+}
+/* === bullets ====*/ 	
+.dark-theme .bullet-container .bullet {
+    background-color: var(--text-accent2);
+}
+.dark-theme .bullet-closed {
+    background-color: #10c354;
+}
+.hd-control span.bullet-container {
+    display: flex;
+    height: 12px;
+    width: 12px;
+    border-radius: 50%;
+    justify-content: center;
+    align-items: center;
+}
+/* === tags ====*/ 
+a.tag {
+    opacity: 1;
+	color: white !important;
+    background-color: var(--tagpills);
+    border: none;
+    font-size: 10px;
+    padding: 1px 8px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    margin: 0px 5px 0px 0px;
+    height: 15px;
+    cursor: pointer;
+    border-radius: 14px;
+}
+.tag:hover {
+    color: white;
+    background-color: var(--text-links);
+}
+a.tag[href*="important"] {
+  background-color: #af1414;
+}    
+a.tag[href*="inprogress"] {
+  background-color: #c38b0a;
+}       
+a.tag[href*="done"] {
+  background-color: #24bb0a;
+}      
+
+/*=== tree lines ===*/	
+.dark-theme .block-children {
+    border-left: 1px solid var(--border);
+}
+/* === backlinks box ====*/ 	
+.dark-theme .bg-base-2 {
+    background-color: var(--bgcolor-alt3);
+	font-size:13px;
+}
+/* === blockquote ====*/ 	
+.dark-theme blockquote {
+    background-color: var(--bgcolor-alt2);
+    border-left: 3px solid var(--text-accent2);
+}
+/* === quote block important === */
+.admonitionblock {
+    margin: 1rem 0;
+}
+.pr-4 {
+    padding-right: 0.7rem;
+}
+/* === codeblocks ====*/ 	
+.dark-theme .non-block-editor textarea, .dark-theme pre, .dark-theme pre.code {
+    background: var(--bgcolor-alt3)
+}
+.dark-theme :not(pre)>code {
+    background: var(--bgcolor-alt3);
+    color: #ff5757;
+}
+
+/* === right-sidebar ===*/
+.dark-theme #right-sidebar {
+    background-color: var(--bgcolor-alt3);
+	border-left: 0px solid var(--border);
+}
+.dark-theme #right-sidebar .sidebar-item {
+    border-top: 0px solid var(--border);
+}
+.dark-theme th {
+    color: #b4bd2f;
+	background-color: var(--bgcolor-alt3);
+	border-bottom: 1px solid var(--border);
+}	
+.dark-theme #right-sidebar .non-block-editor textarea, .dark-theme #right-sidebar pre, .dark-theme #right-sidebar pre.code {
+    background:  var(--bgcolor-alt3);
+	top: -1px !important; 
+}
+    
+.dark-theme th {
+    color: var(--text-contrast);
+}    
+    
+.dark-theme tr:nth-child(2n),
+.dark-theme tr:nth-child(2n+1) {
+    background: var(--bgcolor-alt);
+	border-bottom: 1px solid var(--border);
+}
+#right-sidebar .sidebar-item {
+    border-top: 1px solid #ccc;
+    margin-bottom: 12px;
+    padding-top: 12px;
+}
+/* === rscrollbars===*/
+.dark-theme ::-webkit-scrollbar-track-piece{
+    background-color:var(--bgcolor-alt3);border:0px solid var(--text-accent3);border-radius:0px
+    }
+.dark-theme ::-webkit-scrollbar-thumb:hover{
+    background-color:rgba(137, 240, 157, .4)
+    }
+.dark-theme ::-webkit-scrollbar-thumb {
+    background-color: var(--border);
+    border-radius: 0px;
+    background-clip: padding-box;
+    min-height: 28px;
+}   
+/* ==== scrollbar FF ====*/
+:root {
+    scrollbar-color: var(--text-accent3) var(--bgcolor-alt3) !important;
+	scrollbar-width: auto !important;
+}
+/*=====settings===*/
+.dark-theme .form-select {
+    background-color: var(--text-accent2);
+    background-repeat: no-repeat;
+}
+.border-gray-300 {
+    --border-opacity: 1;
+    border-color: #d2d6dc;
+    border-color: rgba(210,214,220,0);
+}   
+.form-input {
+    appearance: none;
+    background-color: #fff;
+    border-color: #d2d6dc;
+    border-width: 0px;
+    border-radius: .375rem;
+    padding: .5rem .75rem;
+    font-size: 1rem;
+    line-height: 1.5;
+}
+/* === NE top bar ===*/
+.bg-green-600 {
+    --bg-opacity: 1;
+    background-color: #0c9a6d;
+    background-color: rgba(65,180,65,var(--bg-opacity));
+}
+/* === NE top bar ===*/
+.opacity-50 {
+    opacity: 1;
+    color: var(--text-accent3);
+}
+.block-parents.flex-row.flex a {
+    opacity: 1;
+    color: var(--text-accent);
+}
+/* === SE help ==== */
+#help {
+	font-size : 20px;
+	color : #ff0000;
+}	
+/*=== 3dots menu ===*/
+.py-1.rounded-md.shadow-xs.bg-base-3 {
+	background-color : var(--bgcolor-alt3);
+}
+.page-drop-options {
+    width: 20em;
+}	
+/*===push popup===*/
+.relative.bg-white.rounded-lg {
+	background-color: black;
+}
+#modal-headline {
+		color: var(--text-accent3);
+	}
+#commit-message {
+		color: var(--text-color) !important;
+	}
+#commit-message.form-input {
+    appearance: none;
+    background-color: #000;
+    border-color: #188fa7;
+    border-width: 1px;
+    border-radius: .375rem;
+    padding: .5rem .75rem;
+        padding-left: 0.75rem;
+    font-size: 1rem;
+    line-height: 1.5;
+}	
+button.inline-flex.justify-center.w-full.rounded-md.border.border-gray-300.px-4.py-2.bg-white {
+	background-color: #3ad7d7;
+	color: black;
+	}
+button.inline-flex.justify-center.w-full.rounded-md.border.border-transparent.px-4.py-2.bg-indigo-600 {
+	background-color: #ec149e !important;
+	color: #f1f1f1;
+	}
+/* === checkboxes ===*/
+.form-checkbox {
+    display: inline-block;
+    vertical-align: middle;
+    background-origin: border-box;
+    user-select: none;
+    flex-shrink: 0;
+    height: 1rem;
+    width: 1rem;
+    border-color: var(--text-accent2) !important;
+	background-color: var(--bgcolor-alt2) !important;
+    border-width: 1px;
+    border-radius: 50%;
+}
+/* === to do  ===*/
+.marker-switch {
+    font-size: 80%;
+    margin-right: 6px;
+    margin-left: 2px;
+    border-radius: 3px;
+    font-weight: 700;
+    display: inline-block;
+    width: 17px;
+    height: 20px;
+    opacity: 0.75;
+    padding: 0 2px 0 3px;
+    border: 1px solid;
+}
+#later, #doing {
+	color: #ff8400;		
+}
+#now, #todo {
+	color: #ff3113;	
+	font-weight: 700;
+}
+#waiting {
+	color: #fae257;		
+	}
+#done {
+	color: #00ff18;		
+	}
+#canceled {
+	color: #21a8e6;		
+	}
+.done {
+	color: #00ff18 !important;		
+}
+}
