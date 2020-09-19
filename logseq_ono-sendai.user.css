@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           logseq_ono-sendai
 @namespace      https://github.com/cannibalox/logseq_ono-sendai
-@version        0.1.0
+@version        0.1.3
 @description    dark mode for logseq
 @author         _ph / www.hpx1.com
 @updateURL      https://raw.githubusercontent.com/cannibalox/logseq_ono-sendai/master/logseq_ono-sendai.user.css
@@ -303,6 +303,7 @@ a.tag[href*="done"] {
     padding: .5rem .75rem;
     font-size: 1rem;
     line-height: 1.5;
+    color:var(--text-color) !important;
 }
 /* === NE top bar ===*/
 .bg-green-600 {
