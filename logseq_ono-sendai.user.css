@@ -52,7 +52,7 @@ html {
 .dark-theme {
     color: var(--text-color);
 }	
-.dark-theme .bg-base-3 {
+.cp__sidebar-main-layout {
     background-color: var(--bgcolor);
 }
 /*====top bar===*/
