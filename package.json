@@ -1,0 +1,16 @@
+{
+    "name": "logseq-ono-sendai-theme",
+    "author": "cannibalox",
+    "version": "0.0.1",
+    "description": "A terminal-style dark theme for Logseq.",
+    "logseq": {
+      "themes": [
+        {
+          "name": "Ono sendai",
+          "url": "./logseq_ono-sendai.user.css",
+          "description": "A terminal-style dark theme",
+          "mode": "dark"
+        }
+      ]
+    }
+  }
